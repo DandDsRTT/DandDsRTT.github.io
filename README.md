@@ -2,7 +2,7 @@
 
 This repository backs **<https://danddsrtt.github.io/>**, which **redirects to the live app**:
 
-➡️ **<https://rtt-python.onrender.com/>** — D&D's RTT App (a Regular Temperament Theory tool)
+➡️ **<https://danddsrtt-app.onrender.com/>** — D&D's RTT App (a Regular Temperament Theory tool)
 
 ## What this repo is (and isn't)
 
@@ -13,7 +13,8 @@ service on [Render](https://render.com). A NiceGUI app needs a live server — i
 served as static files — so GitHub Pages can't host it directly. This repo therefore now
 contains only a small redirect:
 
-- **`index.html`** — sends visitors to the Render-hosted app.
+- **`index.html`** — sends visitors to the Render-hosted app, forwarding any `?query`
+  string and `#hash` so shared links keep their state.
 - **`.nojekyll`** — tells GitHub Pages to serve the files as-is (skips the Jekyll build).
 
 > Note: the app runs on Render's free tier, which sleeps after ~15 minutes of inactivity,
